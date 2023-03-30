@@ -1,34 +1,45 @@
-@import 'tailwindcss/dist/base.css';
+/* @import 'tailwindcss/dist/base.css';
 @import 'tailwindcss/dist/components.css';
-@import 'tailwindcss/dist/utilities.css';
-
+@import 'tailwindcss/dist/utilities.css'; */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
 .text-center h3 {
     font-size: 4rem;
+    text-decoration: underline;
     color: darkslategrey;
 }
-body {
-    /* background-color: gainsboro; */
-
+.text-center p {
+    font-size: 1.6rem;
+    color: darkslategrey;
 }
 #app {
     padding: 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
-    gap: 4rem;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 2fr));
 }
 .product-container {
     padding: 20px;
     border-radius: 20px;
     transition: .5s;
     cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .product-container:hover {
     background-color: darkslategrey;
     box-shadow: 0 30px 30px rgba(0, 0, 0, 0.3);
-    transform: translateY(-20px);
+    transform: translateY(-30px) scale(1.05);
 }
 .product-image {
-    width: 160px;
+    width: 200px;
     margin: 0 auto;
     border-radius: 100%;
 }
@@ -54,9 +65,4 @@ body {
     color: darkslategrey;
     background-color: #f3f3f3;
     width: 40%;
-}
-@media (max-width: 570px) {
-    #app {
-        gap: 1rem;
-    }
 }
