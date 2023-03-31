@@ -5,6 +5,6 @@ module.exports = {
     src: '/_dist_',
   },
   buildOptions: {
-    baseUrl: 'https://github.com/link4media/WORKSHOP',
+    baseUrl: 'https://link4media.github.io/WORKSHOP/public/index.html',
   },
 }
